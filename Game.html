@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball and Bucket Game</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: lightblue;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        #gameArea {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+        .ball {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            border-radius: 50%;
+        }
+        .bucket {
+            position: absolute;
+            bottom: 20px;
+            width: 80px;
+            height: 40px;
+            background-color: brown;
+            border-radius: 10px;
+        }
+        #scoreBoard {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="scoreBoard">Score: 0</div>
+    <div id="gameArea">
+        <div class="bucket" id="bucket"></div>
+    </div>
+    <script>
+        const gameArea = document.getElementById("gameArea");
+        const bucket = document.getElementById("bucket");
+        const scoreBoard = document.getElementById("scoreBoard");
+        let score = 0;
+        let gameOver = false;
+        
+        document.addEventListener("mousemove", (event) => {
+            if (!gameOver) {
+                bucket.style.left = `${event.clientX - 40}px`;
+            }
+        });
+        
+        function createBall() {
+            if (gameOver) return;
+            
+            const ball = document.createElement("div");
+            ball.classList.add("ball");
+            ball.style.left = `${Math.random() * window.innerWidth}px`;
+            gameArea.appendChild(ball);
+            
+            let fallInterval = setInterval(() => {
+                let ballTop = parseInt(window.getComputedStyle(ball).top || 0);
+                ball.style.top = `${ballTop + 5}px`;
+                
+                let ballRect = ball.getBoundingClientRect();
+                let bucketRect = bucket.getBoundingClientRect();
+                
+                if (
+                    ballRect.bottom >= bucketRect.top &&
+                    ballRect.left >= bucketRect.left &&
+                    ballRect.right <= bucketRect.right
+                ) {
+                    score++;
+                    scoreBoard.textContent = `Score: ${score}`;
+                    clearInterval(fallInterval);
+                    ball.remove();
+                }
+                
+                if (ballTop > window.innerHeight) {
+                    clearInterval(fallInterval);
+                    ball.remove();
+                    endGame();
+                }
+            }, 30);
+        }
+        
+        function endGame() {
+            gameOver = true;
+            alert("Game Over! Your final score: " + score);
+            location.reload();
+        }
+        
+        setInterval(createBall, 1000);
+    </script>
+</body>
+</html>
