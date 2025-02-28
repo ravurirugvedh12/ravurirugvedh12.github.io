@@ -1,188 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ravuri Rugvedh - Full Stack Developer</title>
-    <link rel="icon" type="image/x-icon" href="images/Infografika full-stack developer.png">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* Dark Mode Styling */
-        body {
-            background-color: #121212;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ravuri Rugvedh - Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="assets/images/ball.png">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
-        .container {
-            width: 90%;
-            margin: auto;
-            overflow: hidden;
-        }
+    body {
+      background-color: #111;
+      color: white;
+    }
 
-        .header-row {
-            background-color: #1f1f1f;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+    .container {
+      width: 90%;
+      margin: auto;
+    }
 
-        .header-row h1, .header-row a {
-            color: #f1c40f;
-        }
+    .header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
 
-        .header-row ul {
-            list-style: none;
-            padding: 0;
-        }
+    .header-row h1 {
+      font-size: 24px;
+      color: purple;
+    }
 
-        .header-row li {
-            display: inline;
-            margin: 0 15px;
-        }
+    .header-row ul {
+      list-style: none;
+      display: flex;
+    }
 
-        .header-row a {
-            text-decoration: none;
-            font-size: 1.2rem;
-            transition: color 0.3s;
-        }
+    .header-row ul li {
+      margin-left: 20px;
+    }
 
-        .header-row a:hover {
-            color: #e74c3c;
-        }
+    .header-row ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
 
-        .row {
-            padding: 100px 20px;
-            text-align: center;
-            background-color: #1e1e1e;
-            border-radius: 10px;
-            margin: 20px 0;
-        }
+    .header-row ul li a:hover {
+      color: purple;
+    }
 
-        .box {
-            max-width: 800px;
-            margin: auto;
-        }
+    #home {
+      background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(women.jpeg) center/cover no-repeat;
+      text-align: center;
+      padding: 100px 20px;
+    }
 
-        button {
-            background-color: #f1c40f;
-            color: #000;
-            border: none;
-            padding: 10px 20px;
-            font-size: 1rem;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+    #home h1 {
+      font-size: 40px;
+    }
 
-        button:hover {
-            background-color: #e74c3c;
-            color: white;
-        }
+    button {
+      background: purple;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      margin: 10px;
+      transition: background 0.3s;
+    }
 
-        .footer {
-            background-color: #000;
-            text-align: center;
-            padding: 20px;
-            font-size: 1rem;
-            color: #f1c40f;
-        }
+    button:hover {
+      background: rebeccapurple;
+    }
 
-        /* Projects Page Styling */
-        #projects {
-            background-color: #292b2c;
-            font-family: 'Courier New', Courier, monospace;
-            color: #ffcc00;
-        }
+    .row {
+      padding: 50px 20px;
+      text-align: center;
+    }
 
-        #projects a {
-            color: #ff5733;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    .box {
+      margin: 20px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+    }
 
-        #projects a:hover {
-            color: #ffffff;
-        }
-    </style>
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      margin-top: 30px;
+    }
+  </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="header-row">
-            <h1>Ravuri Rugvedh</h1>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-        
-        <div class="row" id="home">
-            <div class="box">
-                <h1>Full Stack Developer</h1>
-                <p>As a Full Stack Developer, I specialize in designing, developing, and deploying end-to-end web applications that provide seamless user experiences and robust back-end functionality. With expertise in front-end frameworks like React.js and Angular, and back-end technologies like Python, and databases such as MySQL and MongoDB, I create dynamic, scalable, and secure web solutions.</p>
-                <button>View My Work</button>
-            </div>
-        </div>
-
-        <div class="row" id="projects">
-            <h1>Projects</h1>
-            <div class="box">
-                <p><a href="p1.html">E-Commerce Platform</a> - A dynamic online store.</p>
-                <p><a href="bank.html">Banking Application</a> - Secure login and transaction system.</p>
-                <p><a href="Game.html">Gaming Application</a> - Fun to play.</p>
-                <p><a href="project4.html">Project 4</a> - Bootstrap.</p>
-            </div>
-        </div>
-
-        <div class="row" id="services">
-            <h1>Services</h1>
-            <div class="box">
-                <p>Web Development | Mobile App Development | Backend Solutions</p>
-            </div>
-        </div>
-
-        <div class="row" id="about">
-            <h1>About</h1>
-            <p>Experienced in Java, Python, and React.js. Passionate about technology and problem-solving.</p>
-        </div>
-
-        <div class="row" id="contact">
-            <h1>Contact</h1>
-            <div class="box">
-                <p>Email: sample@email.com</p>
-                <p>Phone: +91 343 445 6789</p>
-                <button>Get in Touch</button>
-            </div>
-        </div>
-
-        <div class="footer">© 2024. All Rights Reserved.</div>
+  <div class="container">
+    <div class="header-row">
+      <h1>Ravuri Rugvedh</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    
+    <div id="home">
+      <h2>Ravuri Rugvedh</h2>
+      <h1> </h1>
+      <p>As a skilled full-stack web developer with expertise in building dynamic and scalable web applications. I am Proficient in both front-end and back-end technologies, seamlessly integrates user-friendly interfaces with efficient server-side logic. Passionate about coding, problem-solving, and optimizing performance,stays up to date with the latest industry trends to deliver high-quality digital solutions.</p>
+      <button>LinkedIn</button>
+      <button>Resume</button>
     </div>
 
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener("click", function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute("href").substring(1);
-                const targetElement = document.getElementById(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop,
-                        behavior: "smooth"
-                    });
-                }
-            });
-        });
-    </script>
+    <div id="projects" class="row">
+      <h1>Projects</h1>
+      <div class="box">
+        <h3>Project 1</h3>
+        <a href="p1.html">View Project</a>
+        <p>Online shopping app with advanced features and secure payments.</p>
+      </div>
+    </div>
 
+    
+    <div id=" " class="row">
+        <div class="box">
+          <h3>Project 2</h3>
+          <a href="Game.html">View Project</a>
+          <p>Fun to play</p>
+        </div>
+      </div>
+  
+      <div id=" " class="row">
+        <div class="box">
+          <h3>Project 2</h3>
+          <a href="bank.html">View Project</a>
+          <p>HDFC bank.</p>
+        </div>
+      </div>
+  
+
+    
+        
+  
+  
+       
+      <div id="services" class="row">
+        <h1>Services</h1>
+        <div class="services-container">
+          <div class="box">
+            <h3>Web App Development</h3>
+            <p>Building responsive and scalable web applications with modern frameworks.</p>
+          </div>
+          <div class="box">
+            <h3>Backend Development</h3>
+            <p>Developing efficient server-side logic and database management solutions.</p>
+          </div>
+          <div class="box">
+            <h3>Mobile App Development</h3>
+            <p>Creating cross-platform and native mobile applications with smooth UX.</p>
+          </div>
+        </div>
+      
+      
+
+    <div id="contact" class="row">
+      <h1>Contact</h1>
+      <p>Email: rugvedh@example.com</p>
+      <p>Phone: +91 343 445 6789</p>
+    </div>
+
+    <div class="footer">@copyright 2024. All rights reserved.</div>
+  </div>
 </body>
 </html>
