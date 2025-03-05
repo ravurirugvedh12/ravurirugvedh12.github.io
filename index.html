@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,16 +11,17 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
     }
 
     body {
-      background-color: #111;
+      background-color: #0a0a0a;
       color: white;
     }
 
     .container {
-      width: 90%;
+      width: 85%;
       margin: auto;
     }
 
@@ -30,11 +30,19 @@
       justify-content: space-between;
       align-items: center;
       padding: 15px 0;
+      background: rgba(0, 0, 0, 0.8);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      padding: 15px 10%;
     }
 
     .header-row h1 {
-      font-size: 24px;
-      color: purple;
+      font-size: 26px;
+      color: #ff6600;
+      font-weight: bold;
     }
 
     .header-row ul {
@@ -43,7 +51,7 @@
     }
 
     .header-row ul li {
-      margin-left: 20px;
+      margin-left: 25px;
     }
 
     .header-row ul li a {
@@ -54,44 +62,58 @@
     }
 
     .header-row ul li a:hover {
-      color: purple;
+      color: #ff6600;
     }
 
     #home {
-      background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(women.jpeg) center/cover no-repeat;
+      height: 100vh;
+      background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.8)), url('assets/images/home-bg.jpg') center/cover;
       text-align: center;
-      padding: 100px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
     }
 
     #home h1 {
-      font-size: 40px;
+      font-size: 45px;
+      margin-bottom: 10px;
+      color: #ff6600;
     }
 
-    button {
-      background: purple;
+    #home p {
+      font-size: 18px;
+      max-width: 700px;
+      line-height: 1.6;
+    }
+
+    .btn {
+      background: #ff6600;
       color: white;
-      padding: 10px 20px;
+      padding: 12px 24px;
       border: none;
       cursor: pointer;
       font-size: 18px;
-      margin: 10px;
+      margin: 15px;
+      border-radius: 5px;
       transition: background 0.3s;
     }
 
-    button:hover {
-      background: rebeccapurple;
+    .btn:hover {
+      background: #cc5500;
     }
 
-    .row {
-      padding: 50px 20px;
+    .section {
+      padding: 80px 10%;
       text-align: center;
     }
 
     .box {
       margin: 20px;
-      padding: 20px;
+      padding: 25px;
       background: rgba(255, 255, 255, 0.1);
-      border-radius: 10px;
+      border-radius: 8px;
     }
 
     .footer {
@@ -102,7 +124,6 @@
     }
   </style>
 </head>
-
 <body>
   <div class="container">
     <div class="header-row">
@@ -111,71 +132,115 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
-    
+
     <div id="home">
-      <h2>Ravuri Rugvedh</h2>
-      <h1> </h1>
-      <p>As a skilled full-stack web developer with expertise in building dynamic and scalable web applications. I am Proficient in both front-end and back-end technologies, seamlessly integrates user-friendly interfaces with efficient server-side logic. Passionate about coding, problem-solving, and optimizing performance,stays up to date with the latest industry trends to deliver high-quality digital solutions.</p>
-      <button>LinkedIn</button>
-      <button>Resume</button>
+      <h1>Ravuri Rugvedh</h1>
+      <p>Full-Stack Developer | Passionate About Building Scalable and Modern Web Applications.</p>
+      <button class="btn" onclick="window.open('https://www.linkedin.com/in/your-profile', '_blank')" 
+      style="background-color: orange; color: white; padding: 12px 24px; font-size: 18px; border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s ease, transform 0.2s ease;" 
+      onmouseover="this.style.backgroundColor='rebeccapurple'; this.style.transform='scale(1.05)';" 
+      onmouseout="this.style.backgroundColor='orange'; this.style.transform='scale(1)';">
+        LinkedIn
+      </button>
+      
+      <button class="btn" onclick="window.open('your-resume.pdf', '_blank')" 
+      style="background-color: orange; color: white; padding: 12px 24px; font-size: 18px; border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s ease, transform 0.2s ease;" 
+      onmouseover="this.style.backgroundColor='rebeccapurple'; this.style.transform='scale(1.05)';" 
+      onmouseout="this.style.backgroundColor='orange'; this.style.transform='scale(1)';">
+        Resume
+      </button>
+      
     </div>
 
+   
     <div id="projects" class="row">
-      <h1>Projects</h1>
+        <h1>Projects</h1>
+        <div class="box">
+          <h3>Project 1</h3>
+          <a href="p1.html">View Project</a>
+          <p>Online shopping app.</p>
+        </div>
+      </div>
+  
+      
+      <div id=" " class="row">
+          <div class="box">
+            <h3>Project 2</h3>
+            <a href="Game.html">View Project</a>
+            <p>Fun to play</p>
+          </div>
+        </div>
+    
+        <div id=" " class="row">
+          <div class="box">
+            <h3>Project 2</h3>
+            <a href="bank.html">View Project</a>
+            <p>HDFC bank.</p>
+          </div>
+        </div>
+
+        <div id=" " class="row">
+            <div class="box">
+              <h3>Project 2</h3>
+              <a href="Social Media.html">View Project</a>
+              <p>Social Media.</p>
+            </div>
+          </div>
+    
+  
+      
+
+
+
+
+    <div id="services" class="section">
+      <h1>Services</h1>
       <div class="box">
-        <h3>Project 1</h3>
-        <a href="p1.html">View Project</a>
-        <p>Online shopping app with advanced features and secure payments.</p>
+        <h3>Web App Development</h3>
+        <p>"Crafting seamless, scalable, and high-performance web applications that blend innovation with user-centric design."</p>
+      </div>
+      <div class="box">
+        <h3>Backend Solutions</h3>
+        <p>"Robust and scalable backend solutions ensuring seamless performance, security, and efficiency for modern applications."</p>
+      </div>
+      <div class="box">
+        <h3>Mobile App Development</h3>
+        <p>"Transforming ideas into seamless, high-performance mobile applications with intuitive design and robust functionality." </p>
       </div>
     </div>
 
-    
-    <div id=" " class="row">
-        <div class="box">
-          <h3>Project 2</h3>
-          <a href="Game.html">View Project</a>
-          <p>Fun to play</p>
-        </div>
-      </div>
-  
-      <div id=" " class="row">
-        <div class="box">
-          <h3>Project 2</h3>
-          <a href="bank.html">View Project</a>
-          <p>HDFC bank.</p>
-        </div>
-      </div>
-  
 
-    
+
+    <div id="About Me" class="section">
+        <h1>About Me</h1>
+        <div class="box">
+          <h3>A Full Stack Developer</h3>
+          <p>"I'm a passionate Full-Stack Developer specializing in Python, SQL, and HTML. I build dynamic, scalable web applications with clean, efficient code. From front-end design to back-end logic, I create seamless digital experiences. Always learning, always innovating!"</p>
+        </div>
+
+        <h1>My Skills</h1>
+        <div class="skills-container">
+            <div class="skill">
+                <img src="C:\Users\Rugvedh\OneDrive\Desktop\full stack training\th.jpg" alt="MySQL">
+                <h3>MySQL</h3>
+            </div>
+            <div class="skill">
+                <img src="C:\Users\Rugvedh\OneDrive\Desktop\full stack training\th (1).jpg" alt="HTML">
+                <h3>HTML</h3>
+            </div>
+            <div class="skill">
+                <img src="C:\Users\Rugvedh\OneDrive\Desktop\full stack training\pp.jpg" alt="HTML">
+
+                <h3>Python</h3>
+            </div>
+
         
-  
-  
-       
-      <div id="services" class="row">
-        <h1>Services</h1>
-        <div class="services-container">
-          <div class="box">
-            <h3>Web App Development</h3>
-            <p>Building responsive and scalable web applications with modern frameworks.</p>
-          </div>
-          <div class="box">
-            <h3>Backend Development</h3>
-            <p>Developing efficient server-side logic and database management solutions.</p>
-          </div>
-          <div class="box">
-            <h3>Mobile App Development</h3>
-            <p>Creating cross-platform and native mobile applications with smooth UX.</p>
-          </div>
-        </div>
-      
-      
+      </div>
 
-    <div id="contact" class="row">
+    <div id="contact" class="section">
       <h1>Contact</h1>
       <p>Email: rugvedh@example.com</p>
       <p>Phone: +91 343 445 6789</p>
